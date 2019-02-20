@@ -59,7 +59,10 @@ func (rpcapi *RPCAPI) UnpinPath(ctx context.Context, in string, out *api.PinSeri
 
 // Pins runs Cluster.Pins().
 func (rpcapi *RPCAPI) Pins(ctx context.Context, in struct{}, out *[]api.PinSerial) error {
-	cidList := rpcapi.c.Pins(ctx)
+	cidList, err := rpcapi.c.Pins(ctx)
+	if err != nil {
+		return err
+	}
 	cidSerialList := make([]api.PinSerial, 0, len(cidList))
 	for _, c := range cidList {
 		cidSerialList = append(cidSerialList, c.ToSerial())

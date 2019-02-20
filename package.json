@@ -167,6 +167,12 @@
       "hash": "QmTNoJsB2QwS9FCe9jetrZMpTbuLjMZbAZCXLaUQ4CSX9Z",
       "name": "go-libp2p-ocgorpc",
       "version": "0.1.6"
+    },
+    {
+      "author": "hsanjuan",
+      "hash": "QmSX7A7ZRoCdfd74EQsXNDP9qDwJHR25Cx7m9NiixUe43A",
+      "name": "go-ds-crdt",
+      "version": "0.0.1"
     }
   ],
   "gxVersion": "0.11.0",
